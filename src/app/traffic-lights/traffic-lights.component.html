@@ -1,0 +1,29 @@
+  
+
+
+    <div class="trafficlight">
+        <div class="protector"></div>
+        <div class="protector"></div>
+        <div class="protector"></div>
+        <div [ngClass]="{redOpacity: redOpacity}" class="red"></div>
+        <div [ngClass]="{yellowOpacity: yellowOpacity}" class="yellow"></div>
+        <div [ngClass]="{greenOpacity: greenOpacity}" class="green"></div>
+      </div>
+
+      <h3>id from url =  {{id}}</h3>
+
+            
+    <ng-container *ngIf="trafficLight">  
+      
+        <h1>Id: {{trafficLight.id}}</h1>     
+        <h1>Color: {{trafficLight.color}}</h1>
+        <h1>Date: {{trafficLight.date | date:'medium'}}</h1>        
+    </ng-container>
+
+    <button (click) = "setRed()">Red</button>
+
+    <button (click) = "setYellow()">Yellow</button>
+
+    <button (click) = "setGreen()">Green</button>
+
+ 
